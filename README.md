@@ -1,6 +1,13 @@
 # Mosquito_mojito
 A social task management platform
  
+Credit to the team:
+* Jade L
+* Solomon C
+* Sean C
+* Max K
+* aaanndd myself ;)
+ 
 ## Prerequisites
 Taskmaster requires the following software to be installed on the system.
 * Nodejs 10.24.0

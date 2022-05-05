@@ -1,5 +1,7 @@
 # Mosquito_mojito
 A social task management platform
+Originally named TaskMaster
+The code has been modified into TrustMave to add vulnerabilities for study purposes.
  
 Credit to the team:
 * Jade L
@@ -9,7 +11,7 @@ Credit to the team:
 * aaanndd myself ;)
  
 ## Prerequisites
-Taskmaster requires the following software to be installed on the system.
+TrustMave requires the following software to be installed on the system.
 * Nodejs 10.24.0
 * Python 3.7.3 
 * Pip 9.0.1
@@ -18,7 +20,7 @@ Taskmaster requires the following software to be installed on the system.
 Please note that these version are recommended as they are already available on vlab.
 
 ## How to run 
-To run the taskmaster simply use the following command.
+To run the TrustMave simply use the following command.
 ```
 # cd to the root directory
 $ ./start
@@ -31,13 +33,13 @@ This script will:
 * Install all npm packages that are required for the frontend
 * Launch the frontend
 * Create a logging file for the frontend
-* Open Taskmaster in a web-browser
+* Open TrustMave in a web-browser
 
-Once taskmaster is ready and running, users should see a message indicating the url of the website.
+Once TrustMave is ready and running, users should see a message indicating the url of the website.
 <p style="text-align: center;">
 <em>Serving frontend at http://localhost:port</em>
 
-An option is also provided to run taskmaster and populate the database.
+An option is also provided to run TrustMave and populate the database.
 ```
 # cd to the root directory
 $ ./start --new
@@ -54,7 +56,7 @@ It is recommended that user at least configure the following:
 * The email username and password
 
 ## Logging
-When <em>./start</em> are used to launch Taskmaster, backend logs will be recorded in <em>backend/logs.txt</em> and frontend logs will be recorded in <em>frontend/logs.txt</em>.
+When <em>./start</em> are used to launch TrustMave, backend logs will be recorded in <em>backend/logs.txt</em> and frontend logs will be recorded in <em>frontend/logs.txt</em>.
 
 ## Generating Sample Data
 A script (<em>sampleData.py</em>) has been provided in the backend directory to populate the database with sample users and tasks. This script will add a few users and tasks. Please however take note that it is recommended that users create their own account to test out the functionalities that require a legitimate email address. 

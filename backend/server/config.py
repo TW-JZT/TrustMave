@@ -9,7 +9,7 @@ class Config:
     MAIL_DEBUG = True
     MAIL_SUPRESS_SEND = False
     TESTING = False
-    MAIL_USERNAME = 'taskmaster3900@gmail.com'
+    MAIL_USERNAME = 'trustmave3900@gmail.com'
     MAIL_PASSWORD = 'mosquito_mojito'
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True

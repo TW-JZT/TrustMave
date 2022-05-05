@@ -10,17 +10,15 @@ import HeuristicWeekly from "../components/HeuristicWeekly.js";
 class Dashboard extends React.Component {
 
     state = {
-        user_id:0,
-        user_name:""
+        user_id:1,
+        user_name:"Test User"
     }
 
     componentDidMount(){
-        
-        console.log(this.props)
-        if("user_id" in this.props.location) {
-            this.setState({user_id: this.props.location.user_id, user_name: this.props.location.user_name + "'s "}, () => console.log(this.state));
-        }
-
+        console.log(this.props.location)
+        this.setState(
+            {user_id: this.props.location.user_id, user_name: this.props.location.user_name + "'s "}, 
+            () => console.log(this.state));
      }
 
     render(){
@@ -45,7 +43,7 @@ class Dashboard extends React.Component {
                 <Header />
                 <NavbarAuthenticated/>
                 <div className="tasksBox">
-                    <h2 style={overview}>{this.state.user_name} Daily Overview</h2>
+                    <h2 style={overview}>Daily Overview Placeholder</h2>
                     <div style={row}>
                         <div>
                         <p style={text_centre}><b>Yesterday's Workload:</b></p>
@@ -61,7 +59,7 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <h2 style={overview}>Weekly Overview</h2>
+                        <h2 style={overview}>Weekly Overview Placeholder</h2>
                         <HeuristicWeekly user_id={this.state.user_id}/>
                     </div>
                 </div>

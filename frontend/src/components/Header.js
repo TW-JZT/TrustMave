@@ -7,7 +7,7 @@ import '../StyleSheets/Title.css';
 function Title() {
   return (
     <div className="Title">
-      <h1>TaskMaster</h1>
+      <h1>TrustMave</h1>
     </div>
   )
 }

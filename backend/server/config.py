@@ -14,4 +14,4 @@ class Config:
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     UPLOAD_FOLDER = './server/images'
-    ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+    ALLOWED_EXTENSIONS = {'txt', 'svg'}

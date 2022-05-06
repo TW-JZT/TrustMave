@@ -212,6 +212,7 @@ class ProfileForm extends React.Component {
                 <div className={ (this.state.changeP || this.state.changeM)? "hidden": "homeContainer"}>
            
                 <h1 className="yourProfile">Your Profile</h1>
+                <h3> For compatability reasons, please only upload SVG files as your profile image</h3>
 
 
                 <div className="mainContainer">

@@ -57,7 +57,7 @@ class OtherUserPage extends React.Component {
         user.getProfileImage(uid)
             .then(data => {
                 if (data) {
-                    data = "data:image/jpeg;base64," + data;
+                    data = "data:image/svg+xml;base64," + data;
                     this.setState({ fileInfo: data });
                 }
                 else {
@@ -182,12 +182,16 @@ class OtherUserPage extends React.Component {
                 <Title />
                 <NavbarAuthenticated />
                 <div className="otherUser">
-                    <h1 className="Heading">{this.state.fname} {this.state.lname}</h1>
+                    <h1 className="Heading">{this.state.fname}</h1>
+                    <div 
+                        dangerouslySetInnerHTML={{__html:this.state.lname}}
+                    />
                     <h4>{this.state.email}</h4>
+
                     <div>{this.state.msg}</div>
                     <div>{
                         this.state.fileInfo ?
-                            (<img src={this.state.fileInfo} style={styles} />)
+                            (<object data={this.state.fileInfo} style={styles} />)
                             :
                             (<Icon icon="avatar" size="5x" />)
                     }</div>

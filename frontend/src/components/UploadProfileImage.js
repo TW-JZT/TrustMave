@@ -20,7 +20,7 @@ class UploadProfileImage extends React.Component {
     componentDidMount(){
       user.getProfileImage(0).then(data => {
         if (data){
-          data = "data:image/jpeg;base64," + data;
+          data = "data:image/svg+xml;base64," + data;
           this.setState({fileInfo:data});
         }
         else{
@@ -58,7 +58,7 @@ class UploadProfileImage extends React.Component {
               {this.state.uploading && <Loader backdrop center />}
               {
                 this.state.fileInfo ? 
-                (<img src={this.state.fileInfo} style={styles}/>)
+                (<object data={this.state.fileInfo} style={styles}/>)
                 : 
                 (<Icon icon="avatar" size="5x" />)
               }

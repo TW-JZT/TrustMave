@@ -130,10 +130,10 @@ def reset_request():
         })
 
     token = user.get_reset_token()
-    msg = Message('Password Reset for Task Master', sender = 'max.diamond.kelly@gmail.com', recipients = [content['email']])
+    msg = Message('Password Reset for TrustMave', sender = 'pentest1@hivint.com', recipients = [content['email']])
     msg.body = f'''Hey, sending you this email to reset your password.
-Please go this link to reset your password for your Task Master account:
-http://localhost:3000/reset_password/{token}
+Please go this link to reset your password for your TrustMave account:
+http://localhost:8000/reset_password/{token}
 Also note that this link will expire after 15 mins. 
     '''
     mail.send(msg)

@@ -56,12 +56,6 @@ def login():
         "msg":"Password or Email does not match",
         "auth_token":None
     }) 
-    elif bool(user.auth_token):
-        return jsonify({
-        "success":True,
-        "msg":"User already logged in",
-        "auth_token":user.auth_token
-    })
     elif pwd.verify(content['password'], user.password):
         # using this for now, can switch to something more secure if needed
         # will be used to check if user is logged in, currently does not expire until log out this can be changed

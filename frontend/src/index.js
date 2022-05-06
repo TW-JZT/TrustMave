@@ -18,6 +18,7 @@ import ProfileSearchPage from './pages/ProfileSearchPage';
 import { ResetPasswordPage } from './pages/ResetPasswordPage';
 import { ProfilePage } from './pages/ProfilePage';
 import CalendarViewPage from './pages/CalendarViewPage';
+import TestPage from './pages/testPage';
 
 // utils
 import { ProtectedRoute } from "./utils/protected_route";
@@ -45,6 +46,7 @@ function App() {
         <Route exact path="/forgot_password" component={ForgotPasswordPage} />
         <Route exact path="/check_email" component={CheckEmailPage} />
         <Route exact path="/reset_password/:resetToken" component={ResetPasswordPage}/>
+        <Route exact path="/test" component={TestPage}/>
         <ProtectedRoute exact path="/dashboard" component={Dashboard} />
         <ProtectedRoute exact path="/change_password" component={ChangePasswordPage} />
         <ProtectedRoute exact path="/profile" component={ProfilePage} />

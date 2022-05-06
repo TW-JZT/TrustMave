@@ -19,6 +19,9 @@ cd ./backend
 echo "Started python virtual environment."
 python3 -m venv venv
 . venv/bin/activate
+echo "Downloading backend requirements please wait..."
+touch ./log.txt
+pip install -r requirements.txt > ./log.txt 2>&1
 if [[ $1 == "--new" ]]; then
     rm -f ./server/app.db
 fi
@@ -28,7 +31,10 @@ echo "========== Servering backend on port $port_b =============="
 
 # Frontend 
 cd ../frontend
+echo "Downloading frontend requirements please wait..."
+touch ./log.txt
 sed -i "s/localhost:[0-9]*/localhost:$port_b/" ./package.json
+npm install > ./log.txt 2>&1
 export PORT=$port_f
 npm start > ./log.txt 2>&1 & pids+=" $!"
 echo "Frontend server is now started."

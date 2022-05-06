@@ -47,7 +47,7 @@ class Task {
             user_id,
             startDate,
             endDate,
-            sortKey : sortKey
+            sortKey: sortKey
         })
             .then(res => {
                 return res.data;
@@ -101,7 +101,7 @@ class Task {
             })
     }
 
-   
+
     changeMaxHours(max_hours) {
         return axios.post('/api/changeMaxHours', {
             token: this.token,
@@ -148,7 +148,7 @@ class Task {
         return axios.post('/api/updateTask', {
             token: this.token,
             task_id,
-            changes:task
+            changes: task
         })
             .then(res => {
                 return res.data;
@@ -249,7 +249,20 @@ class Task {
                 return null;
             })
     }
-    
+
+    getRemoteImage(url) {
+        return axios.post('/api/getImage', {
+            url: url
+        })
+            .then(res => {
+                return res.data;
+            })
+            .catch(err => {
+                console.log(err);
+                return null;
+            })
+    }
+
 }
 
 export default new Task;

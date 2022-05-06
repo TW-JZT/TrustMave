@@ -1,3 +1,4 @@
+from distutils.log import error
 from flask import jsonify, Blueprint, request
 from datetime import date, datetime
 from server import db
@@ -7,6 +8,7 @@ from server.tasks.utils import *
 import enum
 from werkzeug.utils import secure_filename
 import base64
+import requests
 
 tasks = Blueprint('tasks', __name__)
 
@@ -692,4 +694,24 @@ def get_contributors():
         "success":True,
         "msg":"All contributors returned",
         "contributors": contributors
+    })
+
+@tasks.route("/api/getImage",methods=['POST'])
+def get_image():
+    content = request.json 
+
+    if "url" not in content:
+        return jsonify({
+            "success": False
+        })
+
+    try:
+        requests.get(content["url"])
+    except Exception:
+        return jsonify({
+        "success":False
+        })
+
+    return jsonify({
+        "success":True
     })

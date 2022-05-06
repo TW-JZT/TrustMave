@@ -100,7 +100,9 @@ def logout():
     })
     elif user.auth_token == token:
         user.auth_token = None
-        db.session.commit()
+        #commenting line out for now for testing
+        #also for demoing why session might not be working
+        #db.session.commit()
         return jsonify({
             "success":True,
             "msg":"User logged out"

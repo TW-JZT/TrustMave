@@ -7,6 +7,8 @@ function LogoutButton(){
     const submit = s => {
         let token = Cookies.get("auth");
         auth.logout(token);
+        Cookies.remove("auth");
+        window.location="/home";
     }
 
     return(

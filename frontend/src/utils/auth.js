@@ -77,12 +77,7 @@ class Auth {
   isAuthenticated() {
     let token = Cookies.get('auth');
     if (token === undefined) { return false }
-    return axios.post('/api/isAuthenticated', { token })
-      .then(res => {
-        console.log(res.data.success);
-        return res.data.success
-      })
-      .catch(_ => {return false})
+    return true;
   }
 
   verifyResetToken(resetToken) {

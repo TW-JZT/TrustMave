@@ -16,7 +16,7 @@ const NavbarAuthenticated = () => {
                 </Nav>
                 <Nav>
                     <Nav.Link href="/profile">My Profile</Nav.Link>
-                    <Nav.Link href="/home"><LogoutButton/></Nav.Link>
+                    <LogoutButton/>
                 </Nav>
             </Container>
         </Navbar>

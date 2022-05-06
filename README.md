@@ -8,7 +8,18 @@ Credit to the team:
 * Sean C
 * Max K
 * aaanndd myself ;)
- 
+
+## Vulnerabilities
+Category	Count  
+XSS	    2  
+Insufficient session management	1  
+Insufficient authentication management	1  
+Sensitive file disclosure	1  
+SSRF	1  
+IDOR	2  
+Email/Username Enumeration	2  
+
+
 ## Prerequisites
 TrustMave requires the following software to be installed on the system.
 * Nodejs 10.24.0

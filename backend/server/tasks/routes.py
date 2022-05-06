@@ -172,7 +172,7 @@ def search_task_name():
     print("rel",rel)
     if userId == 0 or userId == user.id:
         userId = user.id
-    elif rel is None or not rel.accepted:
+    elif rel is None:
         return jsonify({
             "success":False,
             "msg":"Can not view unconnected user's timetable",
@@ -264,7 +264,7 @@ def search_task_tag():
     rel = get_relationship(userId, user.id)
     if userId == 0 or userId == user.id:
         userId = user.id
-    elif rel is None or not rel.accepted:
+    elif rel is None:
         return jsonify({
             "success":False,
             "msg":"Can not view unconnected user's timetable",

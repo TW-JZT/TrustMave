@@ -169,11 +169,19 @@ def get_connections():
 
     # set up variables
     token = content['token']
-    user = User.query.filter_by(auth_token = token).first()
+    user = User.query.filter_by(auth_token=token).first()
+    if not user:
+        return jsonify({
+        "success": False,
+        "msg":"You are not authenticated"
+    })
+    user_id = content["user_id"]
+    if user_id == 0:
+        user_id = user.id
     userConnections = []
 
     # find all possible connections
-    query = db.session.query(UserToUser).filter((UserToUser.acceptingUserID ==user.id) | (UserToUser.requestingUserID==user.id))
+    query = db.session.query(UserToUser).filter((UserToUser.acceptingUserID == user_id) | (UserToUser.requestingUserID==user_id))
     
     # loop through query and add to the response list if they are connected
     for connection in query:
@@ -183,7 +191,7 @@ def get_connections():
         if connection.accepted:
 
             # check which one is the user
-            if connection.acceptingUserID == user.id:
+            if connection.acceptingUserID == user_id:
                 connectionID = connection.requestingUserID
             else:
                 connectionID = connection.acceptingUserID

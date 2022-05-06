@@ -16,7 +16,7 @@ class Connections extends React.Component {
     }
 
     componentDidMount(){
-
+        
        
         user.getConnections(this.state.user_id)
         .then(data => {

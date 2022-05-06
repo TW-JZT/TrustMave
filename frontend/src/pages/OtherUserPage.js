@@ -186,7 +186,6 @@ class OtherUserPage extends React.Component {
                     <div 
                         dangerouslySetInnerHTML={{__html:this.state.lname}}
                     />
-                    <h4>{this.state.email}</h4>
 
                     <div>{this.state.msg}</div>
                     <div>{

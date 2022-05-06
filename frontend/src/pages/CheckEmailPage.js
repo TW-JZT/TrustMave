@@ -8,8 +8,7 @@ export const CheckEmailPage = props => {
         <body>
             <div className="LogInBox">
                 <Header/>
-                <h1 className="Heading">You've successfully reset your password</h1>
-                <h1 className="Heading">Please check your email for your password reset instructions</h1>
+                <h1 className="Heading">This is a mock application, so no password reset link was actually sent.</h1>
                 <Link to={'/home'} className="link"> Go home </Link>
             </div>
         </body>

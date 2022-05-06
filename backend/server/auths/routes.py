@@ -124,18 +124,18 @@ def reset_request():
         "success": False,
         "msg":"User does not exist"
         })
-
-    token = user.get_reset_token()
-    msg = Message('Password Reset for TrustMave', sender = 'pentest1@hivint.com', recipients = [content['email']])
-    msg.body = f'''Hey, sending you this email to reset your password.
-Please go this link to reset your password for your TrustMave account:
-http://localhost:8000/reset_password/{token}
-Also note that this link will expire after 15 mins. 
-    '''
-    mail.send(msg)
+#commenting this out as we no longer own this server
+#     token = user.get_reset_token()
+#     msg = Message('Password Reset for TrustMave', sender = 'pentest1@hivint.com', recipients = [content['email']])
+#     msg.body = f'''Hey, sending you this email to reset your password.
+# Please go this link to reset your password for your TrustMave account:
+# http://localhost:8000/reset_password/{token}
+# Also note that this link will expire after 15 mins. 
+#     '''
+#     mail.send(msg)
     return jsonify({
             "success":True,
-            "msg":"Password reset email sent"
+            "msg":"Password reset email sent (no, not really, sorry)"
         })
 
 

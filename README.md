@@ -9,8 +9,7 @@ Credit to the team:
 * Max K
 * aaanndd myself ;)
 
-## Vulnerabilities
-Category	Count  
+## Vulnerabilities 
 XSS	    2  
 Insufficient session management	1  
 Insufficient authentication management	1  

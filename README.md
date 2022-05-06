@@ -29,10 +29,10 @@ TrustMave requires the following software to be installed on the system.
 Please note that these version are recommended as they are already available on vlab.
 
 ## How to run 
-To run the TrustMave simply use the following command.
+To run the TrustMave for the first time, simply use the following command.
 ```
 # cd to the root directory
-$ ./start
+$ ./setup
 ```
 This script will:
 * Create a python virtual environment (venv)
@@ -51,9 +51,15 @@ Once TrustMave is ready and running, users should see a message indicating the u
 An option is also provided to run TrustMave and populate the database.
 ```
 # cd to the root directory
-$ ./start --new
+$ ./setup --new
 ```
 Please note that this will overwrite all existing data inside the database. 
+
+When running again, use:  
+```
+# cd to the root directory  
+$ ./start  
+```
 
 ## Configurations
 The flask backend server can be configured using the <em>config.py</em> located in </em>./backend/server/config.py</em>.

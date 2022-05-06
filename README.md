@@ -1,5 +1,5 @@
-# Mosquito_mojito's TaskMaster -> now TrustMave
-A social task management platform originally named TaskMaster
+# TrustMave
+A social task management platform originally named TaskMaster. 
 The code has been modified into TrustMave to add vulnerabilities for study purposes.
  
 Credit to the team:

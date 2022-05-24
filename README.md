@@ -10,13 +10,15 @@ Credit to the team:
 * aaanndd myself ;)
 
 ## Vulnerabilities 
-XSS	    2  
-Insufficient session management	1  
-Insufficient authentication management	1  
-Sensitive file disclosure	1  
-SSRF	1  
-IDOR	2  
-Email/Username Enumeration	2  
+| Syntax                                 | Description |
+| -------------------------------------- | ----------- |
+| XSS                                    | 2           |
+| Insufficient session management        | 1           |
+| Insufficient authentication management | 1           |
+| Sensitive file disclosure              | 1           |
+| SSRF                                   | 1           |
+| IDOR                                   | 2           |
+| Email/Username Enumeration             | 2           |
 
 
 ## Prerequisites
@@ -29,7 +31,13 @@ TrustMave requires the following software to be installed on the system.
 Please note that these version are recommended as they are already available on vlab.
 
 ## How to run 
-To run the TrustMave for the first time, simply use the following command.
+
+You can just run:  
+```
+$ docker-compose up --build
+```
+
+To run the TrustMave for the first time without docker, simply use the following command.
 ```
 # cd to the root directory
 $ ./setup

@@ -1,4 +1,17 @@
 # TrustMave
+
+## TLDR
+Docker:  
+```
+$ docker-compose up --build
+```
+No Docker:  
+```
+$ ./setup
+$ ./start
+```
+
+## Project Info
 A social task management platform originally named TaskMaster. 
 The code has been modified into TrustMave to add vulnerabilities for study purposes.
  
